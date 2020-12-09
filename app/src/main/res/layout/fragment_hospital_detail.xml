@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textColor"
+    tools:context=".ui.detail.HospitalDetailFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logo_cardView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="35dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/detail_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_kan_thar_yar" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/banner_Img"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/banner_kan_thar_yar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/rate_linear"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/social_linear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_Img">
+
+        <ImageButton
+            android:id="@+id/heart"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_weight="2"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_heart" />
+
+        <TextView
+            android:id="@+id/rate_txt"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="125"
+            android:textColor="#FB0909" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/social_linear"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toEndOf="@+id/rate_linear"
+        app:layout_constraintTop_toBottomOf="@+id/banner_Img">
+
+        <ImageButton
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_weight="2"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_email" />
+
+        <ImageButton
+            android:id="@+id/facebook"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_weight="2"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_facebook" />
+
+        <ImageButton
+            android:id="@+id/weblink"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_weight="2"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_www" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rate_linear">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="5"
+            android:src="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/phoneNo_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="3"
+            android:paddingLeft="15dp"
+            android:text="၀၁ ၅၀၅၂၈၄၊ ၀၉ ၃၄၀၀၉၀၀၀၂၊ ၀၉ ၃၄၀၀၉၀၀၀၄၊ ၀၉ ၃၀၅၁၁၁၁၁၊ ၀၉ ၃၀၅၃၃၃၃၃" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/address_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_linear">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="5"
+            android:src="@drawable/ic_map" />
+
+        <TextView
+            android:id="@+id/hospitalAddress_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="3"
+            android:paddingLeft="15dp"
+            android:text="၀၁ ၅၀၅၂၈၄၊ ၀၉ ၃၄၀၀၉၀၀၀၂၊ ၀၉ ၃၄၀၀၉၀၀၀၄၊ ၀၉ ၃၀၅၁၁၁၁၁၊ ၀၉ ၃၀၅၃၃၃၃၃" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/packages_btn"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="62dp"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/specialities_btn"
+        app:layout_constraintTop_toBottomOf="@id/address_linear"
+        android:layout_width="105dp"
+        android:text="Packages"
+        android:textSize="13sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textColor="@color/textColor"
+        android:layout_height="35dp"/>
+    <Button
+        android:id="@+id/specialities_btn"
+        android:layout_marginRight="62dp"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintLeft_toRightOf="@id/packages_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_linear"
+        android:layout_width="105dp"
+        android:text="Specialities"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/packages_btn"
+        android:textColor="@color/textColor"
+        android:layout_height="35dp"/>
+    <Button
+        android:id="@+id/physicians_btn"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/schedule_btn"
+        app:layout_constraintTop_toBottomOf="@id/packages_btn"
+        android:layout_width="105dp"
+        android:textSize="13sp"
+        android:text="Physicians"
+        android:textColor="@color/textColor"
+        android:layout_height="35dp"/>
+    <Button
+        android:id="@+id/schedule_btn"
+        android:background="@drawable/btn_bg"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/physicians_btn"
+        app:layout_constraintRight_toLeftOf="@id/recommet_btn"
+        app:layout_constraintBaseline_toBaselineOf="@id/physicians_btn"
+        app:layout_constraintTop_toBottomOf="@id/packages_btn"
+        android:layout_width="105dp"
+        android:text="Schedule"
+        android:textColor="@color/textColor"
+        android:layout_height="35dp"/>
+    <Button
+        android:id="@+id/recommet_btn"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintLeft_toRightOf="@id/schedule_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/specialities_btn"
+        android:layout_width="135dp"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/physicians_btn"
+        android:text="Recommendation"
+        android:textColor="@color/textColor"
+        android:layout_height="35dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

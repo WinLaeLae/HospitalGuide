@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hospital Guide</string>
+    <string name="title_hospital">Hospital</string>
+    <string name="title_packages">Packages</string>
+    <string name="title_physician">Physician</string>
+    <string name="title_specialities">Specialities</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_specilities">Specilities</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_recommendation">Recommendation</string>
+</resources>

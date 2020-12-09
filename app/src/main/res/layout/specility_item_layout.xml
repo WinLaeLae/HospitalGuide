@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/speciality_item_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="175dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    android:id="@+id/specialityName_txt"
+    android:layout_marginTop="5dp"
+    android:textSize="12sp"
+    android:text="ကင်ဆာရောဂါဓာတ်ရောင်ခြည်အထူးကုဆရာဝန်ကြီးများ"
+    android:textColor="@color/textColor"
+    android:maxLines="3"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/speciality_img"
+    android:fontFamily="@font/pyidaungsu_book_bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/speciality_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/heart"
+        app:layout_constraintBottom_toTopOf="@id/specialityEngName_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/specialityName_txt"/>
+    <TextView
+        android:id="@+id/specialityEngName_txt"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:text="Rediation Oncologists (Cancer)"
+        android:textColor="@color/textColor"
+        android:maxLines="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/speciality_img"
+        android:fontFamily="@font/pyidaungsu_book_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

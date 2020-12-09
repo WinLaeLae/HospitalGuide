@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_hospital">
+
+    <fragment
+        android:id="@+id/navigation_hospital"
+        android:name="mm.com.fairway.hospitalguide.ui.hospital.HospitalFragment"
+        android:label="@string/title_hospital"
+        tools:layout="@layout/fragment_hospital" >
+        <action
+            android:id="@+id/action_navigation_hospital_to_hospitalDetailFragment"
+            app:destination="@id/hospitalDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_packages"
+        android:name="mm.com.fairway.hospitalguide.ui.packages.PackagesFragment"
+        android:label="@string/title_packages"
+        tools:layout="@layout/fragment_packages" />
+
+    <fragment
+        android:id="@+id/navigation_physician"
+        android:name="mm.com.fairway.hospitalguide.ui.physician.PhysicianFragment"
+        android:label="@string/title_physician"
+        tools:layout="@layout/fragment_physician" />
+    <fragment
+        android:id="@+id/hospitalDetailFragment"
+        android:name="mm.com.fairway.hospitalguide.ui.detail.HospitalDetailFragment"
+        android:label="fragment_hospital_detail"
+        tools:layout="@layout/fragment_hospital_detail" >
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_hospitalDetailFragment_to_hosptalWebLinkFragment"
+            app:destination="@id/hosptalWebLinkFragment" />
+        <action
+            android:id="@+id/action_hospitalDetailFragment_to_btnEvent_Fragment"
+            app:destination="@id/btnEvent_Fragment" />
+        <action
+            android:id="@+id/action_hospitalDetailFragment_to_hospitalMapFragment"
+            app:destination="@id/hospitalMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hosptalWebLinkFragment"
+        android:name="mm.com.fairway.hospitalguide.ui.weblink.HosptalWebLinkFragment"
+        android:label="fragment_hosptal_web_link"
+        tools:layout="@layout/fragment_hosptal_web_link" >
+        <argument
+            android:name="webLink"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_specility"
+        android:name="mm.com.fairway.hospitalguide.ui.specilities.SpecilitiesFragment"
+        android:label="fragment_specilities"
+        tools:layout="@layout/fragment_specilities" />
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="mm.com.fairway.hospitalguide.ui.schedule.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/btnEvent_Fragment"
+        android:name="mm.com.fairway.hospitalguide.ui.btn_event.BtnEvent_Fragment"
+        android:label="fragment_btn_event_"
+        tools:layout="@layout/fragment_btn_event_" >
+        <argument
+            android:name="btnName"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/hospitalMapFragment"
+        android:name="mm.com.fairway.hospitalguide.ui.HospitalMapFragment"
+        android:label="fragment_hospital_map"
+        tools:layout="@layout/fragment_hospital_map" >
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="lon"
+            app:argType="float" />
+    </fragment>
+</navigation>
